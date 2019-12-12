@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { withAuth } from '../lib/AuthProvider';
 
-function AnonRoute({ component: Component, isLoggedin, isLoading, ...rest }) {
+function MySignsRoute({ component: Component, isLoggedin, isLoading, ...rest }) {
 
   if (isLoading) {
     return <h1>Loading</h1>
@@ -12,11 +12,11 @@ function AnonRoute({ component: Component, isLoggedin, isLoading, ...rest }) {
       <Route
         {...rest}
         render={props =>
-          !isLoggedin ? <Component {...props} /> : <Redirect to="/mysigns" />
+          isLoggedin ? <Component {...props} /> : <Redirect to="/login" />
         }
       />
     );
   }
 }
 
-export default withAuth(AnonRoute);
+export default withAuth(MySignsRoute);
