@@ -11,7 +11,7 @@ import AnonRoute from './components/AnonRoute';
 import HomeButtons from './components/HomeButtons';
 
 import MySignsRoute from './components/MySignsRoute';
-import ResourcesRoute from './components/ResourcesRoute';
+// import ResourcesRoute from './components/ResourcesRoute';
 
 import logo from './images/logo192.png';
 import styled from 'styled-components'
@@ -57,7 +57,7 @@ class App extends Component {
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/login" component={Login} />
           <MySignsRoute exact path="/mysigns" component={MySigns} />
-          <ResourcesRoute exact path="/resources" component={Resources}/>
+          <Resources exact path="/resources" pages={Resources}/>
         </Switch>
 
         </Container>

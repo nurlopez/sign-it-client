@@ -26,20 +26,21 @@ export default class ResourceList extends Component {
   }
   render() {
     const allResources = this.state.listOfResources.map(resource => {
-      return (
+      
+        return (
         <Link
           to={`/resources/${resource.category}`}
           key={resource._id}
           className="resource"
         >
           {" "}
-          Show all
+          {resource.category}
         </Link>
       );
     });
     return (
       <div>
-        <p> testing 123 </p> {allResources}{" "}
+        {allResources}{" "}
       </div>
     );
   }

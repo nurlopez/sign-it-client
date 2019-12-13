@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import sign from '../images/sign.png';
-import addSign from '../images/add-sign.png';
+import AddSign from '../components/MySigns/AddSign'
 
 class MySigns extends Component {
   render() {
@@ -10,8 +10,7 @@ class MySigns extends Component {
         
         <h1>My Signs</h1>
         <div>
-        <img src ={addSign} alt="sign" width= "100px" />
-        <button>add new-sign</button>
+      <AddSign />
         </div>
 
         <h2>My Collection</h2>
