@@ -6,7 +6,7 @@ class Resources extends Component {
       <div>
         
         <h1>Resources</h1>
-        <p>search bar</p> 
+        <p>Search bar</p> 
         <p> All categories </p>
       </div>
     );

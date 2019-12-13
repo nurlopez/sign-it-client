@@ -43,12 +43,12 @@ class Navbar extends Component {
         <Nav>
           {" "}
           {isLoggedin ? (
-            <div class="signup-btns">
+            <div className="signup-btns">
               <p> username: {user.username} </p>{" "}
               <Button primary onClick={logout}> Logout </Button>{" "}
             </div>
           ) : (
-            <div class="signup-btns">
+            <div className="signup-btns">
               <Link to="/login">
                 {" "}
                 <Button primary> Login </Button>{" "}
