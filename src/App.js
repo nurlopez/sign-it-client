@@ -13,7 +13,7 @@ import HomeButtons from './components/HomeButtons';
 import MySignsRoute from './components/MySignsRoute';
 import ResourcesRoute from './components/ResourcesRoute';
 
-import logo from './public/logo192.png';
+import logo from './images/logo192.png';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -26,13 +26,13 @@ text-align:center;
 `
 const Main = styled.div`
 background-color: #E0E4CC;
-height: 100vh;
-width: 100vw;
+height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-content: center;
 text-align:center;
+margin: -10px;
 
 @import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
 h1 {
