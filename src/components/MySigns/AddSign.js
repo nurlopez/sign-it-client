@@ -59,7 +59,7 @@ toggleForm = () => this.setState({isShowing: !this.state.isShowing});
             <input name="pictoURL" placeholder='PictoURL'
                 value={this.state.pictoURL}
                 onChange={ (e) => this.handleChange(e)} />
-              
+              <br></br>
               <button onClick={this.handleFormSubmit}>Submit</button>
             </form>
           </div>)

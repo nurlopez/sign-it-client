@@ -1,49 +1,37 @@
 import React, { Component } from 'react';
 import { Switch } from 'react-router-dom';
 
+
+// ------ CSS + IMAGES ----- ///
+import logo from './images/logo192.png';
+import { Container } from './styles/global'
+import { Main } from './styles/global'
+
+// ------ GLOBAL PAGES + COMPONENTS ----- ///
+
+import Navbar from './components/Navbar';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import MySigns from './pages/MySigns';
-import Resources from './pages/Resources'
-import Navbar from './components/Navbar';
-import ResourceLetters from './pages/ResourceLetters';
 
 import AnonRoute from './components/AnonRoute';
 import HomeButtons from './components/HomeButtons';
 
-import MySignsRoute from './components/MySignsRoute';
+// ------ RESOURCE PAGES ----- ///
+import Resources from './pages/Resources'
+import ResourceLetters from './pages/ResourceLetters';
+import ResourceGreetings from './pages/ResourceGreetings';
+import ResourceTransport from './pages/ResourceTransport';
+// import ResourceSignCard from './pages/ResourceSignCard';
+
+
+// ------ RESOURCE COMPONENTS ----- ///
 import ResourceList from './components/resources/ResourceList';
+import ResourceLettersList from './components/resources/ResourceLettersList';
+// ------ MY-SIGNS PAGES ----- ///
+import MySigns from './pages/MySigns';
 
-// import ResourcesRoute from './components/ResourcesRoute';
-
-import logo from './images/logo192.png';
-import styled from 'styled-components'
-
-const Container = styled.div`
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align:center;
-`
-const Main = styled.div`
-background-color: #E0E4CC;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-content: center;
-text-align:center;
-margin: -10px;
-
-@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
-h1 {
-  font-family: 'Solway', serif;
-}
-`
-
-
+// ------ MY-SIGNS COMPONENTS ----- ///
+import MySignsRoute from './components/MySignsRoute';
 
 class App extends Component {
   render() {
@@ -60,7 +48,12 @@ class App extends Component {
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/login" component={Login} />
           <Resources exact path="/resources" pages={Resources}/>
-          <ResourceLetters exact path="/resources/letters" component={ResourceList} /> 
+          <ResourceLetters exact path="/resources/letters" component={ResourceLettersList} /> 
+          <ResourceGreetings exact path="/resources/Greetings" component={ResourceList} /> 
+          <ResourceTransport exact path="/resources/Transport" component={ResourceList} /> 
+          {/* <ResourceSignCard exact path="/resources/:id" pages={ResourceSignCard}/> */}
+
+          
           {/*---- private ----*/}
           <MySignsRoute exact path="/mysigns" component={MySigns} />
         </Switch>

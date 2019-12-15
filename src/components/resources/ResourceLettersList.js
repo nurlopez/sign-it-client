@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default class ResourceList extends Component {
+export default class ResourceLettersList extends Component {
   state = {
     listOfResources: []
   };
@@ -12,11 +12,11 @@ export default class ResourceList extends Component {
       .get("http://localhost:5000/resources")
       .then(response => {
         const listOfResources = response.data;
-        console.log("anything?", response.data); // returns all
+        // console.log("anything?", response.data); // returns all
         this.setState({
           listOfResources
         });
-        console.log("state", listOfResources); // returns all
+        // console.log("state", listOfResources); // returns all
       })
       .catch(err => console.log(err));
   };
@@ -26,21 +26,21 @@ export default class ResourceList extends Component {
   }
   render() {
     const allResources = this.state.listOfResources.map(resource => {
-      
         return (
-        <Link 
-          to={`/resources/${resource.category}`}
-          key={resource._id}
+        <Link
+          to={`/resources/${resource.category}/${resource.meaning}`}
+          key={resource.meaning}
           className="resource"
         >
-          {" "}
+          {""}
           {resource.category}
-                </Link>
+        </Link>
       );
     });
     return (
       <div>
-        {/* {allResources}{" "} */}
+        {allResources}
+        {""}
       </div>
     );
   }

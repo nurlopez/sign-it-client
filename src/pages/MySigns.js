@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { ContainerButtons } from '../styles/elements'
+ 
 import sign from '../images/sign.png';
 import AddSign from '../components/MySigns/AddSign'
 
@@ -14,11 +15,13 @@ class MySigns extends Component {
         </div>
 
         <h2>My Collection</h2>
-        <div className="sign">
+        <ContainerButtons>
+        <div className="signcard">
         <img src ={sign} alt="sign" width= "100px" />
         <button>edit my-sign</button>
         <button>view my-sign</button>
-      </div>
+        </div>
+     
       
       <div className="sign">
         <img src ={sign} alt="sign" width= "100px" />
@@ -31,7 +34,7 @@ class MySigns extends Component {
         <button>edit my-sign</button>
         <button>view my-sign</button>
       </div>
-
+      </ContainerButtons>
       </div>
     );
   }

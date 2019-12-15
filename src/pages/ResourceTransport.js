@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 // import resourcesService from '../lib/resources-service'; // IMPORT functions for axios requests to API
 
-// import ResourceLettersList from "../components/resources/ResourceLettersList";
-import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
-// import ResourceSignCard from "../pages/ResourceSignCard";
 import ResourceList from "../components/resources/ResourceList";
+import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
 import imgURL from '../images/abc.gif';
 
 
-export class ResourceLetters extends Component {
+export class ResourceTransport extends Component {
   render() {
     return (
       <div>
-        <h1>Resources - Letters</h1>
+        <h1>Resources - Transport</h1>
         <ResourceHomeBtns />
         <ResourceList />
-            <br></br>
-       <table>
+      <br></br>
+      <table>
       <tr>
       <td><img src={imgURL}  alt="sign" width= "100px"/></td>
       <td><img src={imgURL}  alt="sign" width= "100px"/></td>
@@ -42,10 +40,10 @@ export class ResourceLetters extends Component {
       <td>meaning 3</td>
       </tr>
       </table>
-        
+      
       </div>
     );
   } 
 }
 
-export default ResourceLetters;
+export default ResourceTransport;

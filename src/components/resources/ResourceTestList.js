@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default class ResourceList extends Component {
   state = {
@@ -12,11 +12,11 @@ export default class ResourceList extends Component {
       .get("http://localhost:5000/resources")
       .then(response => {
         const listOfResources = response.data;
-        console.log("anything?", response.data); // returns all
+        // console.log("anything?", response.data); // returns all
         this.setState({
           listOfResources
         });
-        console.log("state", listOfResources); // returns all
+        // console.log("state", listOfResources); // returns all
       })
       .catch(err => console.log(err));
   };
@@ -28,19 +28,22 @@ export default class ResourceList extends Component {
     const allResources = this.state.listOfResources.map(resource => {
       
         return (
-        <Link 
-          to={`/resources/${resource.category}`}
-          key={resource._id}
-          className="resource"
-        >
-          {" "}
-          {resource.category}
-                </Link>
+        <div>
+            {resource.imgURL}
+            <br />
+            {resource.meaning}
+            <br />
+            {resource.pictoURL}
+            <br />
+            <br />
+
+        </div>
       );
     });
     return (
       <div>
-        {/* {allResources}{" "} */}
+      <p>ResourceTestList page</p>
+        {allResources}{" "}
       </div>
     );
   }

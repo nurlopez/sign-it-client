@@ -16,9 +16,21 @@ color: white;
 
 
 
-export const ContainerButtons = styled.div`
+export const ContainerButtons = styled.div
+`
 display: flex;
 flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align:center;
+`
+
+
+
+export const Signcard = styled.div
+`
+display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align:center;
