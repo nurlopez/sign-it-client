@@ -14,3 +14,12 @@ background: #69D2E7;
 color: white;
 `}`;
 
+
+
+export const ContainerButtons = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align:center;
+`

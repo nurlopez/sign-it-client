@@ -1,19 +1,12 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
-import styled from 'styled-components'
 import { Button } from '../styles/elements'
 
+import { ContainerButtons } from '../styles/elements'
 
-
-const ContainerButtons = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-text-align:center;
-`
 
 export class HomeButtons extends Component {
     render() {

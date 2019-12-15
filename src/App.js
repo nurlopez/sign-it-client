@@ -6,11 +6,14 @@ import Login from './pages/Login';
 import MySigns from './pages/MySigns';
 import Resources from './pages/Resources'
 import Navbar from './components/Navbar';
+import ResourceLetters from './pages/ResourceLetters';
 
 import AnonRoute from './components/AnonRoute';
 import HomeButtons from './components/HomeButtons';
 
 import MySignsRoute from './components/MySignsRoute';
+import ResourceList from './components/resources/ResourceList';
+
 // import ResourcesRoute from './components/ResourcesRoute';
 
 import logo from './images/logo192.png';
@@ -49,15 +52,17 @@ class App extends Component {
       <Main>
         <Navbar />
         <Container>
-        <img src={logo} alt="logo" width="100px" align="middle"/>
+        <a href="/"><img src={logo} alt="logo" width="150px" align="middle"/></a>
         <h1>SIGN IT</h1>
         <HomeButtons />
 
         <Switch>
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/login" component={Login} />
-          <MySignsRoute exact path="/mysigns" component={MySigns} />
           <Resources exact path="/resources" pages={Resources}/>
+          <ResourceLetters exact path="/resources/letters" component={ResourceList} /> 
+          {/*---- private ----*/}
+          <MySignsRoute exact path="/mysigns" component={MySigns} />
         </Switch>
 
         </Container>
