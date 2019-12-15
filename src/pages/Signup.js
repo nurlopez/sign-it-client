@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../lib/AuthProvider';
 
+import { Form } from '../styles/elements'
+
+
 class Signup extends Component {
   state = { username: '', password: '' };
 
@@ -22,7 +25,9 @@ class Signup extends Component {
     return (
       <div>
         <h1>Sign Up</h1>
+        <Form>
         <form onSubmit={this.handleFormSubmit}>
+        <div>
           <label>Username:</label>
           <input
             type="text"
@@ -30,6 +35,8 @@ class Signup extends Component {
             value={username}
             onChange={this.handleChange}
           />
+          </div>
+          <div>
 
           <label>Password:</label>
           <input
@@ -38,9 +45,10 @@ class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
-
+          </div>
           <input type="submit" value="Signup" />
         </form>
+        </Form>
 
         <p>Already have account?</p>
         <Link to={'/login'}> Login</Link>
