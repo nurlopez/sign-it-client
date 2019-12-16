@@ -1,17 +1,33 @@
 import React, { Component } from "react";
-// import resourcesService from '../lib/resources-service'; // IMPORT functions for axios requests to API
 import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
 import ResourceList from "../components/resources/ResourceList";
 
+import resourcesServices from "../lib/resources-service";
+
 
 export class Resources extends Component {
+  state = {
+    listOfResources: []
+  };
+
+  getResourceHandler = (category) => {
+    
+     resourcesServices.getAllResources(category)
+    .then( (allResources) => {
+      console.log(allResources)
+      this.setState({listOfResources : allResources})
+    })
+    .catch( (err) => console.log(err));
+  }
+
+
   render() {
     return (
 
       <div>
         <h1>Resources</h1>
-        <ResourceHomeBtns />
-        <ResourceList />
+        <ResourceHomeBtns handleResults={this.getResourceHandler}/>
+        <ResourceList resources={this.state.listOfResources}/>
         
        
         

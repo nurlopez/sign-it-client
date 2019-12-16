@@ -8,10 +8,11 @@ class Resources {
     });
   }
   
-  getAllResources = () => {
-
-    return this.resource.get('/').then(response => {
-        console.log('services', response.data);
+  getAllResources = (category) => {
+       
+        
+    return this.resource.get(`/cateogories/${category}`).then(response => {
+        console.log('services-2', response.data);
         return response.data
     })
   }
