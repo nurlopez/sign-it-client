@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Button } from '../styles/elements'
-
 import { ContainerButtons } from '../styles/elements'
 
 

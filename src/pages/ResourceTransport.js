@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import ResourceList from "../components/resources/ResourceList";
 import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
-import imgURL from '../images/abc.gif';
+// import imgURL from '../images/abc.gif';
 
 
 export class ResourceTransport extends Component {
@@ -13,7 +13,7 @@ export class ResourceTransport extends Component {
         <h1>Resources - Transport</h1>
         <ResourceHomeBtns />
         <ResourceList />
-      <br></br>
+      {/* <br></br>
       <table>
       <tr>
       <td><img src={imgURL}  alt="sign" width= "100px"/></td>
@@ -40,7 +40,7 @@ export class ResourceTransport extends Component {
       <td>meaning 3</td>
       </tr>
       </table>
-      
+       */}
       </div>
     );
   } 

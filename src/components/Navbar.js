@@ -2,38 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withAuth } from "../lib/AuthProvider";
 
-import styled, {css} from "styled-components";
+/*---- styled components ----*/
+import { Nav } from '../styles/global'
+import { NavButton } from '../styles/global'
 
-const Nav = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
-  background-color: #F38630;
-  }
-  p {
-    font-family: "Solway", serif;
-  }
-  .signup-btns {
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0px;
-   }
-`;
 
-const Button = styled.button
-`background: transparent;
-border: solid 1px #F38630 ;
-border-radius: 3px;
-color: #F38630;
-margin: 0 1em;
-padding: 0.25em 1em;
-${props => props.primary && css`
-border: solid 1px  white;
-background: #FA6900;
-color: white;
-`}`;
+
 
 class Navbar extends Component {
   render() {
@@ -45,18 +19,18 @@ class Navbar extends Component {
           {isLoggedin ? (
             <div className="signup-btns">
               <p> username: {user.username} </p>{" "}
-              <Button primary onClick={logout}> Logout </Button>{" "}
+              <NavButton primary onClick={logout}> Logout </NavButton>{" "}
             </div>
           ) : (
             <div className="signup-btns">
               <Link to="/login">
                 {" "}
-                <Button primary> Login </Button>{" "}
+                <NavButton primary> Login </NavButton>{" "}
               </Link>{" "}
               <br />
               <Link to="/signup">
                 {" "}
-                <Button primary> Signup </Button>{" "}
+                <NavButton primary> Signup </NavButton>{" "}
               </Link>{" "}
             </div>
           )}{" "}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-
-import imgURL from '../images/abc.gif';
+// import imgURL from '../images/abc.gif';
 
 // import resourcesService from '../lib/resources-service'; // IMPORT functions for axios requests to API
 import ResourceList from "../components/resources/ResourceList";
@@ -16,7 +15,7 @@ export class ResourceGreetings extends Component {
         <ResourceHomeBtns />
         <ResourceList />
         <br></br>
-       <table>
+       {/* <table>
       <tr>
       <td><img src={imgURL}  alt="sign" width= "100px"/></td>
       <td><img src={imgURL}  alt="sign" width= "100px"/></td>
@@ -41,7 +40,7 @@ export class ResourceGreetings extends Component {
       <td>meaning 2</td>
       <td>meaning 3</td>
       </tr>
-      </table>
+      </table> */}
         
       </div>
     );

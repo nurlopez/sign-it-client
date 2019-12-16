@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import resourcesServices from '../../lib/resources-service';
 
 
@@ -18,16 +18,16 @@ export default class ResourceList extends Component {
     const allResources = this.state.listOfResources.map(resource => {
       console.log('ResourceList', allResources);
       
-        return (
-        <Link 
-          to={`/resources/categories/${resource.category}`}
-          key={resource}
-          className="resource"
-        >
-          {" helloletters"}
-          {resource.category}
-                </Link>
-      );
+      //   return (
+      //   <Link 
+      //     to={`/resources/categories/${resource.category}`}
+      //     key={resource}
+      //     className="resource"
+      //   >
+      //     {" helloletters"}
+      //     {resource.category}
+      //           </Link>
+      // );
     });
     return (
       <div>

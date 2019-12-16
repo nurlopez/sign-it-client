@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-// import resourcesService from '../lib/resources-service'; // IMPORT functions for axios requests to API
-
-// import ResourceLettersList from "../components/resources/ResourceLettersList";
 import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
-// import ResourceSignCard from "../pages/ResourceSignCard";
 import ResourceList from "../components/resources/ResourceList";
-import imgURL from '../images/abc.gif';
-
+// import imgURL from '../images/abc.gif';
+// import resourcesService from '../lib/resources-service'; // IMPORT functions for axios requests to API
+// import ResourceLettersList from "../components/resources/ResourceLettersList";
+// import ResourceSignCard from "../pages/ResourceSignCard";
 
 export class ResourceLetters extends Component {
   render() {
     return (
       <div>
+       <br></br>
+       <ResourceHomeBtns />
         <h1>Resources - Letters</h1>
-        <ResourceHomeBtns />
+       
         <ResourceList />
-            <br></br>
+            {/* <br></br>
        <table>
       <tr>
       <td><img src={imgURL}  alt="sign" width= "100px"/></td>
@@ -42,7 +42,7 @@ export class ResourceLetters extends Component {
       <td>meaning 3</td>
       </tr>
       </table>
-        
+         */}
       </div>
     );
   } 

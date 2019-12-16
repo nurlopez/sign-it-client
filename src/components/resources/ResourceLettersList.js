@@ -14,7 +14,7 @@ export default class ResourceLettersList extends Component {
 render() {
   return (
     <div>
-      <h1>Resources</h1>
+      <h1>Resources - testLetters</h1>
       <ResourceList />
       
      
