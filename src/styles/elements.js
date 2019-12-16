@@ -26,6 +26,17 @@ align-items: center;
 text-align:center;
 `
 
+export const ContainerSigns = styled.div
+`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+text-align:center;
+width-max: 100vw;
+`
+
 
 
 export const Signcard = styled.div
@@ -35,6 +46,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align:center;
+padding: 10px;
 `
 
 export const Form = styled.div

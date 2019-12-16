@@ -3,6 +3,7 @@ import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
 import ResourceList from "../components/resources/ResourceList";
 
 import resourcesServices from "../lib/resources-service";
+import { ContainerSigns } from '../styles/elements'
 
 
 export class Resources extends Component {
@@ -16,6 +17,7 @@ export class Resources extends Component {
     .then( (allResources) => {
       console.log(allResources)
       this.setState({listOfResources : allResources})
+      console.log('uola', allResources)
     })
     .catch( (err) => console.log(err));
   }
@@ -27,8 +29,10 @@ export class Resources extends Component {
       <div>
         <h1>Resources</h1>
         <ResourceHomeBtns handleResults={this.getResourceHandler}/>
-        <ResourceList resources={this.state.listOfResources}/>
+
         
+        <ResourceList resources={this.state.listOfResources}/>
+      
        
         
       </div>
