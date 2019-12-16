@@ -16,6 +16,8 @@ class Navbar extends Component {
     return (
       <div>
         <Nav>
+        
+        
           {" "}
           {isLoggedin ? (
             <div className="signup-btns">
