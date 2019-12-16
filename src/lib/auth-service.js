@@ -1,9 +1,11 @@
 import axios from 'axios';
 
+
+
 class Auth {
   constructor() {
     this.auth = axios.create({
-      baseURL: 'http://localhost:5000',
+      baseURL: process.env.REACT_APP_SERVER_URL + "/auth",
       withCredentials: true,
     });
   }
@@ -11,23 +13,27 @@ class Auth {
   signup(user) {
     const { username, password } = user;
     return this.auth
-      .post('/auth/signup', { username, password })
+      .post('/signup', { username, password })
       .then(({ data }) => data);
   }
 
   login(user) {
     const { username, password } = user;
     return this.auth
-      .post('/auth/login', { username, password })
-      .then(({ data }) => data);
+      .post('/login', { username, password })
+      .then(({ data }) => {
+        
+        
+        return data
+      });
   }
 
   logout() {
-    return this.auth.post('/auth/logout', {}).then(response => response.data);
+    return this.auth.post('/logout', {}).then(response => response.data);
   }
 
   profile() {
-    return this.auth.get('/auth/profile').then(response => response.data);
+    return this.auth.get('/profile').then(response => response.data);
   }
 }
 

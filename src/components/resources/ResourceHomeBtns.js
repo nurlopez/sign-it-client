@@ -10,16 +10,16 @@ export default class ResourceHomeBtns extends Component {
         
       <div>
         <ContainerButtons>
-          <Link to="/resources/letters">
+          <Link to="resources/categories/letters">
             {" "}
             <Button primary >Letters</Button>{" "}
           </Link>
           <br />
-          <Link to="/resources/greetings">
+          <Link to="/resources/categories/greetings">
             {" "}
             <Button primary>Greetings</Button>{" "}
           </Link>
-          <Link to="/resources/transport">
+          <Link to="/resources/categories/transport">
             {" "}
             <Button primary>Transport</Button>{" "}
           </Link>

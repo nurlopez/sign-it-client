@@ -1,17 +1,24 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// class Resources {
-//   constructor() {
-//     this.resource = axios.create({
-//       baseURL: 'http://localhost:5000',
-//       withCredentials: true,
-//     });
-//   }
-//   resources() {
-//     return this.resources.get('/resources').then(response => response.data);
-//   }
-// }
+class Resources {
+  constructor() {
+    this.resource = axios.create({
+      baseURL: process.env.REACT_APP_SERVER_URL + "/resources",
+      withCredentials: true,
+    });
+  }
+  
+  getAllResources = () => {
 
-// const axiosRequestFunctions = new Resources();
+    return this.resource.get('/').then(response => {
+        console.log('services', response.data);
+        return response.data
+    })
+  }
 
-// export default axiosRequestFunctions;
+
+}
+
+const resourcesServices = new Resources();
+
+export default resourcesServices;

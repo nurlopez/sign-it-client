@@ -1,46 +1,37 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
+import resourcesServices from '../../lib/resources-service';
+
 
 export default class ResourceList extends Component {
   state = {
     listOfResources: []
   };
 
-  getAllResources = () => {
-    axios
-      .get("http://localhost:5000/resources")
-      .then(response => {
-        const listOfResources = response.data;
-        console.log("anything?", response.data); // returns all
-        this.setState({
-          listOfResources
-        });
-        console.log("state", listOfResources); // returns all
-      })
-      .catch(err => console.log(err));
-  };
+
 
   componentDidMount() {
-    this.getAllResources();
+    resourcesServices.getAllResources();
   }
   render() {
     const allResources = this.state.listOfResources.map(resource => {
+      console.log('ResourceList', allResources);
       
         return (
         <Link 
-          to={`/resources/${resource.category}`}
-          key={resource._id}
+          to={`/resources/categories/${resource.category}`}
+          key={resource}
           className="resource"
         >
-          {" "}
+          {" helloletters"}
           {resource.category}
                 </Link>
       );
     });
     return (
       <div>
-        {/* {allResources}{" "} */}
+        {allResources}{" hola"}
       </div>
     );
   }

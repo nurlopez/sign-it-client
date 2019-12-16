@@ -26,7 +26,7 @@ import ResourceTransport from './pages/ResourceTransport';
 
 // ------ RESOURCE COMPONENTS ----- ///
 import ResourceList from './components/resources/ResourceList';
-import ResourceLettersList from './components/resources/ResourceLettersList';
+// import ResourceLettersList from './components/resources/ResourceLettersList';
 // ------ MY-SIGNS PAGES ----- ///
 import MySigns from './pages/MySigns';
 
@@ -48,9 +48,9 @@ class App extends Component {
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/login" component={Login} />
           <Resources exact path="/resources" pages={Resources}/>
-          <ResourceLetters exact path="/resources/letters" component={ResourceLettersList} /> 
-          <ResourceGreetings exact path="/resources/Greetings" component={ResourceList} /> 
-          <ResourceTransport exact path="/resources/Transport" component={ResourceList} /> 
+          <ResourceLetters exact path="/resources/categories/letters" component={ResourceList} /> 
+          <ResourceGreetings exact path="/resources/categories/greetings" component={ResourceList} /> 
+          <ResourceTransport exact path="/resources/categories/transport" component={ResourceList} /> 
           {/* <ResourceSignCard exact path="/resources/:id" pages={ResourceSignCard}/> */}
 
           
