@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withAuth } from '../lib/AuthProvider';
-
+import { Link } from 'react-router-dom';
 import { Form } from '../styles/elements'
 
 class Login extends Component {
@@ -46,6 +46,12 @@ class Login extends Component {
           <input type="submit" value="Login" />
         </form>
         </Form>
+
+        <p>Don't have an account?</p>
+        <Link to={'/signup'}> Signup</Link>
+
+
+
       </div>
     );
   }
