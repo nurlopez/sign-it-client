@@ -21,7 +21,7 @@ export default class AddSign extends Component {
         const { author } = this.props;
 
         axios
-        .post("http://localhost:5000/mysigns/create-sign", { imageURL, meaning, pictoURL, author}, {withCredentials: true,})
+        .post("http://localhost:5000/mysigns/create-sign", { imageURL, meaning, pictoURL, author}, {withCredentials: true})
         .then(() => {
         this.props.getMySigns();
         this.setState({ imageURL:'', meaning:'', pictoURL:''})
