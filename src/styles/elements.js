@@ -9,6 +9,10 @@ border-radius: 3px;
 color: #F38630;
 margin: 0 1em;
 padding: 0.25em 1em;
+a  {
+    text-decoration: none;
+    color: white;
+  }
 ${props => props.primary && css`
 border: none;
 background: #69D2E7;
