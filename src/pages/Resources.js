@@ -3,7 +3,6 @@ import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
 import ResourceList from "../components/resources/ResourceList";
 
 import resourcesServices from "../lib/resources-service";
-import { ContainerSigns } from '../styles/elements'
 
 
 export class Resources extends Component {
