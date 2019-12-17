@@ -27,7 +27,7 @@ export class HeaderHomeButtons extends Component {
             </Link>
 
             </ContainerButtons>
-            <hr></hr>
+            <p><b> . . .</b></p>
             </div>
         )
     }

@@ -4,6 +4,7 @@ import ResourceList from "../components/resources/ResourceList";
 import Navbar from '../components/Navbar';
 
 import resourcesServices from "../lib/resources-service";
+import { Container } from "../styles/global";
 
 
 
@@ -29,14 +30,14 @@ export class Resources extends Component {
 
       <div>
       <Navbar />
-      
-        <h1>Resources</h1>
+      <Container>
+        <h2>Resources</h2>
         <ResourceHomeBtns handleResults={this.getResourceHandler}/>
 
         
         <ResourceList resources={this.state.listOfResources}/>
     
-        
+        </Container>
       </div>
     );
   }

@@ -18,7 +18,7 @@ export default class ResourceList extends Component {
                   alt={`sign for ${resource.meaning}`}
                   width="100px"
                 />
-                <p> {resource.meaning} </p>{" "}
+                <p>{resource.meaning}</p>{" "}
               </Signcard>
             );
           })

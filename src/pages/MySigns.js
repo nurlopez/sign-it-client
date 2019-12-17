@@ -13,11 +13,11 @@ class MySigns extends Component {
       <Navbar />
       <Container>
         
-        <h1>My Signs</h1>
+        <h2>My Signs</h2>
         <div>
       <AddSign />
         </div>
-
+        <h1>...</h1>
         <h2>My Collection</h2>
         <ContainerButtons>
         <div className="signcard">

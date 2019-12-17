@@ -39,6 +39,7 @@ justify-content: center;
 align-content: center;
 text-align:center;
 width-max: 100vw;
+background-color: #E0E4CC;
 `
 
 

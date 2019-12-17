@@ -6,9 +6,11 @@ import AuthProvider from './lib/AuthProvider';
 
 ReactDOM.render(
   <Router>
+  
     <AuthProvider>
       <App />
     </AuthProvider>
+    
   </Router>,
   document.getElementById('root'),
 );

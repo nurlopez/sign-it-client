@@ -36,9 +36,7 @@ color: white;
 `}`;
 
 
-
-
-export const Container = styled.div`
+export const HomeContainer = styled.div`
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -46,9 +44,20 @@ justify-content: center;
 align-items: center;
 text-align:center;
 `
+
+
+
+export const Container = styled.div`
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+text-align:center;
+`
 export const Main = styled.div`
 background-color: #E0E4CC;
-height: 100%;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -57,8 +66,16 @@ text-align:center;
 margin: -10px;
 
 @import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 h1 {
   font-family: 'Solway', serif;
+}
+h2 {
+  font-family: 'Solway'; 
+  font-size: 20px;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 `
 
