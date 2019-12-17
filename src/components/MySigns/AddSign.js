@@ -11,7 +11,8 @@ export default class AddSign extends Component {
             imageURL:'',
             meaning:'',
             pictoURL:'',
-            isShowing: false
+            isFormShowing: false,
+            isButtonShowing: true
         }
     }
 
@@ -29,7 +30,10 @@ export default class AddSign extends Component {
         .catch(err => console.log(err));
 };
 
-toggleForm = () => this.setState({isShowing: !this.state.isShowing});
+toggleForm = () => this.setState({
+  isFormShowing: !this.state.isFormShowing,
+  isButtonShowing: !this.state.isButtonShowing,
+});
 
   handleChange = (event) => {  
     const {name, value} = event.target;
@@ -39,18 +43,25 @@ toggleForm = () => this.setState({isShowing: !this.state.isShowing});
     render() {
         return (
             <div>
-               <img src ={addSign} alt="sign" width= "100px" />
-               <button onClick={this.toggleForm}> Add my sign </button>
+               
+{
+  this.state.isButtonShowing ?
+  (
+    <div>
+    <img src ={addSign} alt="sign" width= "100px" />
+               <button onClick={this.toggleForm}> Add my sign </button> </div>
+               )
+               :
+               null
+}
+
 
         {
-          !this.state.isShowing ?
-           null
-          :
+          this.state.isFormShowing ?
           (<div>
             <form>
-              <input type="text" placeholder='ImageURL'
-                name="imageURL" value={this.state.imageURL}
-                onChange={ (e) => this.handleChange(e)}/>
+              <input type="file" placeholder='ImageURL'
+                name="imageURL" onChange={ (e) => this.handleChange(e)}/>
               
               <input name="meaning" placeholder='Meaning'
                 value={this.state.meaning}
@@ -63,6 +74,7 @@ toggleForm = () => this.setState({isShowing: !this.state.isShowing});
               <button onClick={this.handleFormSubmit}>Submit</button>
             </form>
           </div>)
+          : null
         }
       </div>
     )
