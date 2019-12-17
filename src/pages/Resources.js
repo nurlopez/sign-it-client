@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ResourceHomeBtns from "../components/resources/ResourceHomeBtns";
 import ResourceList from "../components/resources/ResourceList";
+import Navbar from '../components/Navbar';
 
 import resourcesServices from "../lib/resources-service";
 
@@ -26,6 +27,7 @@ export class Resources extends Component {
     return (
 
       <div>
+      <Navbar />
         <h1>Resources</h1>
         <ResourceHomeBtns handleResults={this.getResourceHandler}/>
 

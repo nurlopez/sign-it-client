@@ -5,7 +5,7 @@ import { withAuth } from "../lib/AuthProvider";
 /*---- styled components ----*/
 import { Nav } from '../styles/global'
 import { NavButton } from '../styles/global'
-import HomeButtons from "./HomeButtons";
+import HeaderHomeButtons from "./HeaderHomeButtons";
 
 
 
@@ -38,7 +38,7 @@ class Navbar extends Component {
             </div>
           )}{" "}
         </Nav>{" "}
-        <HomeButtons/>
+        <HeaderHomeButtons/>
       </div>
     );
   }

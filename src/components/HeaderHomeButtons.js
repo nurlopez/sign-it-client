@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../styles/elements'
 import { ContainerButtons } from '../styles/elements'
-import logo from '../images/logo192.png';
+import logo from '../images/logo-sign-it.gif';
 
 
-export class HomeButtons extends Component {
+export class HeaderHomeButtons extends Component {
     render() {
         return (
             <div>
@@ -16,9 +16,6 @@ export class HomeButtons extends Component {
           <a href="/"><img src={logo} alt="logo" width="50px" align="middle"/></a> 
         <h1>SIGN IT</h1>
                   
-          
-
-
             <Link to="/resources">
               {' '}
               <Button>Resources</Button>{' '}
@@ -28,10 +25,11 @@ export class HomeButtons extends Component {
               {' '}
               <Button primary>My Signs</Button>{' '}
             </Link>
+
             </ContainerButtons>
             </div>
         )
     }
 }
 
-export default HomeButtons
+export default HeaderHomeButtons

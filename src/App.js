@@ -7,7 +7,6 @@ import { Main } from './styles/global'
 
 // ------ GLOBAL PAGES + COMPONENTS ----- ///
 
-import Navbar from './components/Navbar';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -33,10 +32,8 @@ class App extends Component {
     return (
       <div className="App">
       <Main>
-        <Navbar />
         
-
-        <Switch>
+          <Switch>
           <Route exact path="/" component={Home}/>
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/login" component={Login} />

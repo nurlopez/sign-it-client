@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { ContainerButtons } from '../styles/elements'
- 
+import { Container } from '../styles/global'
+
 import sign from '../images/sign.png';
 import AddSign from '../components/MySigns/AddSign'
+import Navbar from '../components/Navbar';
 
 class MySigns extends Component {
   render() {
     return (
       <div>
+      <Navbar />
+      <Container>
         
         <h1>My Signs</h1>
         <div>
@@ -35,6 +39,7 @@ class MySigns extends Component {
         <button>view my-sign</button>
       </div>
       </ContainerButtons>
+      </Container>
       </div>
     );
   }
