@@ -12,10 +12,10 @@ export class HeaderHomeButtons extends Component {
         return (
             <div>
             <ContainerButtons>
-
+      
           <a href="/"><img src={logo} alt="logo" width="50px" align="middle"/></a> 
-        <h1>SIGN IT</h1>
-                  
+              {/* <h1>SIGN IT</h1> */}
+              
             <Link to="/resources">
               {' '}
               <Button>Resources</Button>{' '}
@@ -27,6 +27,7 @@ export class HeaderHomeButtons extends Component {
             </Link>
 
             </ContainerButtons>
+            <hr></hr>
             </div>
         )
     }

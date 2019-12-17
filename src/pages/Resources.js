@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import resourcesServices from "../lib/resources-service";
 
 
+
 export class Resources extends Component {
   state = {
     listOfResources: []
@@ -28,13 +29,13 @@ export class Resources extends Component {
 
       <div>
       <Navbar />
+      
         <h1>Resources</h1>
         <ResourceHomeBtns handleResults={this.getResourceHandler}/>
 
         
         <ResourceList resources={this.state.listOfResources}/>
-      
-       
+    
         
       </div>
     );
