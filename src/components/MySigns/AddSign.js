@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import addSign from "../../images/add-sign.png";
-import axios from "axios";
-// import { Signcard } from "../../styles/elements";
+import mySignService from "../../lib/mysign-service";
+
+
 
 export default class AddSign extends Component {
   constructor(props) {
@@ -19,19 +20,13 @@ export default class AddSign extends Component {
     event.preventDefault();
     const { imageURL, meaning, pictoURL } = this.state;
     const { author } = this.props;
+    mySignService.createSign({imageURL, meaning, pictoURL, author})
+    .then((sign) => {
+      console.log('es una signcard?', sign);
+    })
+    .catch((error) => console.log(error))
+  }
 
-    axios
-      .post(
-        "process.env.REACT_APP_SERVER_URL/mysigns/create-sign",
-        { imageURL, meaning, pictoURL, author },
-        { withCredentials: true }
-      )
-      .then(() => {
-        this.props.getMySigns();
-        this.setState({ imageURL: "", meaning: "", pictoURL: "" });
-      })
-      .catch(err => console.log(err));
-  };
 
   toggleForm = () =>
     this.setState({
@@ -41,11 +36,14 @@ export default class AddSign extends Component {
 
     fileChange = (event) => {
       const file = event.target.files[0];
+      console.log('es un archivo?', file);
+      
       const uploadData = new FormData()
       uploadData.append('photo', file)
-      MySign.imageUpload(uploadData)
+      mySignService.imageUpload(uploadData)
       .then((image) => {
-          this.setState({ photoUrl: image })
+        console.log('es una imagen?', image);
+          this.setState({ imageURL: image })
       })
       .catch((error) => console.log(error))
     }
@@ -53,8 +51,8 @@ export default class AddSign extends Component {
   handleChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
-  };
-
+  }
+  
   render() {
     return (
       <div>
@@ -82,12 +80,12 @@ export default class AddSign extends Component {
                 onChange={e => this.handleChange(e)}
               />
 
-              <input
+              {/* <input
                 name="pictoURL"
                 placeholder="PictoURL"
                 value={this.state.pictoURL}
                 onChange={e => this.handleChange(e)}
-              />
+              /> */}
               <br></br>
               <button onClick={this.handleFormSubmit}>Submit</button>
             </form>

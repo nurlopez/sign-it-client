@@ -2,39 +2,36 @@ import axios from 'axios';
 
 class MySigns {
     constructor() {
-        this.mysign = axios.create({
-          baseURL: process.env.REACT_APP_SERVER_URL + "/resources",
+        this.mySign = axios.create({
+          baseURL: process.env.REACT_APP_SERVER_URL + "/mysigns",
           withCredentials: true,
         });
       }
 
-      handleFormSubmit = event => {
-        event.preventDefault();
-        const { imageURL, meaning, pictoURL } = this.state;
-        const { author } = this.props;
-    
-        axios
-          .post(
-            "process.env.REACT_APP_SERVER_URL/mysigns/create-sign",
-            { imageURL, meaning, pictoURL, author },
-            { withCredentials: true }
-          )
-          .then(() => {
-            this.props.getMySigns();
-            this.setState({ imageURL: "", meaning: "", pictoURL: "" });
-          })
-          .catch(err => console.log(err));
-      };
-    
       imageUpload(file) {
         console.log(file);
-        return this.auth.post("/create-sign", file).then(({ data }) => {
-          return data;
-        });
+        return this.mySign.post("/create-sign/image", file)
+            .then(({ data }) => {
+                console.log('service-image', data);
+                return data
+            })
+            
+            
       } 
+
+    //   handleFormSubmit = event => {
+    //     event.preventDefault();
+    //     const { imageURL, meaning, pictoURL } = this.state;
+    //     const { author } = this.props;
     
-    }
+    createSign(newMySign) {
+        return this.mySign.post('/create-sign', newMySign )
+            .then(({ data }) => data)
+            
+    } 
+}
+     
     
-    const mysignsServices = new MySigns();
+    const mySignService = new MySigns();
     
-    export default mysignsServices;   
+    export default mySignService;   
