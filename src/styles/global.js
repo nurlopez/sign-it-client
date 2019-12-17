@@ -44,9 +44,6 @@ justify-content: center;
 align-items: center;
 text-align:center;
 `
-
-
-
 export const Container = styled.div`
 height: 100vh;
 display: flex;
@@ -55,6 +52,12 @@ justify-content: flex-start;
 align-items: center;
 text-align:center;
 `
+export const SubmitBtn = styled.button
+`
+
+`
+
+
 export const Main = styled.div`
 background-color: #E0E4CC;
 min-height: 100vh;

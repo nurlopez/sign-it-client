@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { withAuth } from '../lib/AuthProvider';
 
 import { Form } from '../styles/elements'
+import Navbar from '../components/Navbar';
+import { Container, SubmitBtn } from '../styles/global';
 
 
 class Signup extends Component {
@@ -24,6 +26,8 @@ class Signup extends Component {
     const { username, password } = this.state;
     return (
       <div>
+      <Navbar />
+      <Container>
         <h1>Sign Up</h1>
         <Form>
         <form onSubmit={this.handleFormSubmit}>
@@ -46,12 +50,15 @@ class Signup extends Component {
             onChange={this.handleChange}
           />
           </div>
+          <SubmitBtn>
           <input type="submit" value="Signup" />
+          </SubmitBtn> 
         </form>
         </Form>
 
         <p>Already have account?</p>
         <Link to={'/login'}> Login</Link>
+        </Container>
       </div>
     );
   }
