@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import mySignService from "../../lib/mysign-service";
 
-import { Button } from '../../styles/elements'
 import addSign from "../../images/add_photo.svg";
+
+import { Button, Form } from '../../styles/elements'
+import { Container } from '../../styles/global';
+
 
 export default class AddSign extends Component {
   constructor(props) {
@@ -71,7 +74,9 @@ export default class AddSign extends Component {
 
         {this.state.isFormShowing ? (
           <div>
-            <form>
+          <Container>
+          <Form>
+            
               <input
                 type="file"
                 placeholder="ImageURL"
@@ -87,8 +92,12 @@ export default class AddSign extends Component {
               />
 
               <br></br>
-              <button onClick={this.handleFormSubmit}>Submit</button>
-            </form>
+              <Button onClick={this.handleFormSubmit}>
+              Submit
+              </Button>
+            
+            </Form>
+            </Container>
           </div>
         ) : null}
       </div>
