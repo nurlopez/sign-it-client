@@ -19,7 +19,11 @@ background: #69D2E7;
 color: white;
 `}`;
 
-
+export const ButtonIcon = styled.button
+`
+border: none;
+background: none;
+`
 
 export const ContainerButtons = styled.div
 `
@@ -36,7 +40,7 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
-align-content: center;
+align-items: flex-start;
 text-align:center;
 width-max: 100vw;
 background-color: #E0E4CC;
@@ -51,7 +55,17 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align:center;
+word-wrap: break-word;
 padding: 10px;
+background: white;
+border: solid 1px white;
+border-radius: 5px;
+margin: 2px;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+img  {
+  border-radius: 5px;
+}
 `
 
 export const Form = styled.div

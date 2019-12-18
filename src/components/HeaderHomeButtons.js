@@ -17,13 +17,13 @@ export class HeaderHomeButtons extends Component {
               {/* <h1>SIGN IT</h1> */}
               
             <Link to="/resources">
-              {' '}
-              <Button>Resources</Button>{' '}
+              
+              <Button>Resources</Button>
             </Link>
             <br />
             <Link to="/mysigns">
-              {' '}
-              <Button primary>My Signs</Button>{' '}
+              
+              <Button primary>My Signs</Button>
             </Link>
 
             </ContainerButtons>

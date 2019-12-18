@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import { ContainerButtons } from '../styles/elements'
 import { Container } from '../styles/global'
 
-// import sign from '../images/sign.png';
 import AddSign from '../components/MySigns/AddSign'
 import Navbar from '../components/Navbar';
 import MySignsList from '../components/MySigns/MySignsList';
@@ -36,31 +34,15 @@ class MySigns extends Component {
         <div>
           <AddSign />
         </div>
+
         <h1>...</h1>
         <h2>My Collection</h2>
-
-          <MySignsList mySigns={this.state.listOfMySigns}/>
         
-        {/* <ContainerButtons>
-        <div className="signcard">
-        <img src ={sign} alt="sign" width= "100px" />
-        <button>edit my-sign</button>
-        <button>view my-sign</button>
-        </div>
+    
+          <MySignsList mySigns={this.state.listOfMySigns}/>
+  
      
       
-      <div className="sign">
-        <img src ={sign} alt="sign" width= "100px" />
-        <button>edit my-sign</button>
-        <button>view my-sign</button>
-      </div>
-
-      <div className="sign">
-        <img src ={sign} alt="sign" width= "100px" />
-        <button>edit my-sign</button>
-        <button>view my-sign</button>
-      </div>
-      </ContainerButtons>*/}
       </Container> 
       </div>
     );

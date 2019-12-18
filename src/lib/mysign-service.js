@@ -28,6 +28,22 @@ class MySigns {
     allMySigns() {
       return this.mySign.get('/').then(response => response.data);
     }
+
+    getOneMySign =(id) =>{
+      return this.mySign.get(`/${id}`)
+      .then((data)=> data.data )
+    }
+
+    updateMySign =(id) =>{
+      return this.mySign.put(`/${id}/edit`)
+      .then((data)=> data.data )
+    }
+
+    deleteMySign =(id) =>{
+      return this.mySign.del(`/${id}`)
+      .then((data)=> data.data )
+    }
+    
 }
      
     

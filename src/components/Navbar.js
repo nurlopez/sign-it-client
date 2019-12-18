@@ -17,26 +17,26 @@ class Navbar extends Component {
       <div>
         <Nav>
         
-          {" "}
+          
           {isLoggedin ? (
             <div className="signup-btns">
-              <p> username: {user.username} </p>{" "}
-              <NavButton primary onClick={logout}> Logout </NavButton>{" "}
+              <p> username: {user.username} </p>
+              <NavButton primary onClick={logout}> Logout </NavButton>
             </div>
           ) : (
             <div className="signup-btns">
               <Link to="/login">
-                {" "}
-                <NavButton primary> Login </NavButton>{" "}
-              </Link>{" "}
+               
+                <NavButton primary> Login </NavButton>
+              </Link>
               <br />
               <Link to="/signup">
-                {" "}
-                <NavButton primary> Signup </NavButton>{" "}
-              </Link>{" "}
+                
+                <NavButton primary> Signup </NavButton>
+              </Link>
             </div>
-          )}{" "}
-        </Nav>{" "}
+          )}
+        </Nav>
         <HeaderHomeButtons/>
       </div>
     );

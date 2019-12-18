@@ -33,8 +33,8 @@ export default class MySignsList extends Component {
       <button onClick={this.handleGetSignCards}>View all SignCards</button>
       
       <AllSigns mySigns={this.state.listOfMySigns}/>
-        
-      </ContainerSigns>
+
+     </ContainerSigns>
       
     );
   }

@@ -24,7 +24,7 @@ export default class AddSign extends Component {
     mySignService.createSign({imageURL, meaning, pictoURL, author})
     .then((sign) => {
       console.log('es una signcard?', sign);
-    })
+       })
     .catch((error) => console.log(error))
 
     
