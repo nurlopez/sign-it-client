@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../styles/elements'
 import { ContainerButtons } from '../styles/elements'
-import logo from '../images/logo-sign-it.gif';
+// import logo from '../images/logo-sign-it.gif';
+/*---- Section Buttons ----- */
+import resourcesLib from '../images/resourcesLib.svg';
+import privateSigns from '../images/lock_open.svg';
 
 
 export class HeaderHomeButtons extends Component {
@@ -13,17 +16,23 @@ export class HeaderHomeButtons extends Component {
             <div>
             <ContainerButtons>
       
-          <a href="/"><img src={logo} alt="logo" width="50px" align="middle"/></a> 
+          {/* <a href="/"><img src={logo} alt="logo" width="50px" align="middle"/></a>  */}
               {/* <h1>SIGN IT</h1> */}
               
             <Link to="/resources">
               
-              <Button>Resources</Button>
+              <Button>
+              <img src={ resourcesLib } alt= "user" width= "50" />
+              Resources
+              </Button>
             </Link>
             <br />
             <Link to="/mysigns">
               
-              <Button primary>My Signs</Button>
+              <Button primary>
+              <img src={ privateSigns } alt= "user" width= "50" />
+              My Signs
+              </Button>
             </Link>
 
             </ContainerButtons>

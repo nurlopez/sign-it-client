@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { withAuth } from '../lib/AuthProvider';
 import { Link } from 'react-router-dom';
 import { Form } from '../styles/elements'
-import {Container} from '../styles/global';
+import { Container} from '../styles/global';
+import { SubmitBtn } from '../styles/global'
+
 import Navbar from '../components/Navbar';
 
 class Login extends Component {
@@ -49,13 +51,16 @@ class Login extends Component {
             onChange={this.handleChange}
           />
           </div>
+          <SubmitBtn>
           <input type="submit" value="Login" />
+          </SubmitBtn>
         </form>
         </Form>
 
         <p>Don't have an account?</p>
+        <SubmitBtn>
         <Link to={'/signup'}> Signup</Link>
-
+        </SubmitBtn>
         </Container>
         </div>
     );

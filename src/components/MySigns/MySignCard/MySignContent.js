@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import edit from '../../../images/edit.png';
 import remove from '../../../images/delete.png';
-import {ContainerButtons, ButtonIcon } from '../../../styles/elements';
+import { ContainerButtons, ButtonIcon } from '../../../styles/elements';
 import mySignService from '../../../lib/mysign-service'
 
 
@@ -40,7 +40,8 @@ export default class MySignContent extends Component {
             <img src={edit} alt= "edit2" width= "30"/></ButtonIcon>
 
             <ButtonIcon onClick={this.handleRemoveMySign}>
-            <img src={remove} alt= "delete" width= "30"/></ButtonIcon>
+            <img src={remove} alt= "delete" width= "30"/>
+            </ButtonIcon>
             </ContainerButtons>
 
            </>

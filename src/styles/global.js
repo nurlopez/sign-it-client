@@ -5,7 +5,9 @@ import styled, { css }  from 'styled-components'
 
 export const Nav = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
-  background-color: #F38630;
+  background-color: #F9F8F4;
+  margin-top: -20px;
+  padding: 20px 0px;
   }
   p {
     font-family: "Solway", serif;
@@ -23,15 +25,20 @@ export const Nav = styled.div`
 
 
 export const NavButton = styled.button
-`background: transparent;
+`
+display: flex;
+flex-direction: row;
+justify-items: center;
+align-items: center;
+background: transparent;
 border: solid 1px #F38630 ;
 border-radius: 3px;
 color: #F38630;
 margin: 0 1em;
 padding: 0.25em 1em;
 ${props => props.primary && css`
-border: solid 1px  white;
-background: #FA6900;
+border: none;
+background: transparent;
 color: white;
 `}`;
 
@@ -54,12 +61,24 @@ padding: 50px 25px;
 }
 `
 export const Container = styled.div`
+@import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
 height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: center;
 text-align:center;
+label {
+  font-family: "Solway", serif; 
+}
+input {
+  background: #E0E4CC;
+  border: none;
+  border-bottom: solid 1px ;
+  margin-top: 20px;
+
+  font-family: "Solway", serif; 
+}
 `
 export const SubmitBtn = styled.button
 `
@@ -68,7 +87,8 @@ export const SubmitBtn = styled.button
 
 
 export const Main = styled.div`
-background-color: #E0E4CC;
+background:#F9F8F4
+${'' /* linear-gradient( 45deg, #feada6, #f5efef ); */}
 min-height: 100vh;
 display: flex;
 flex-direction: column;
