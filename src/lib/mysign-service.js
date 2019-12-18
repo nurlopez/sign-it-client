@@ -34,9 +34,14 @@ class MySigns {
       .then((data)=> data.data )
     }
 
-    updateMySign =(id) =>{
-      return this.mySign.put(`/${id}/edit`)
-      .then((data)=> data.data )
+    updateMySign =(sign) =>{
+
+      const { imgURL, meaning, pictoURL, _id } = sign
+
+
+      return this.mySign
+                .put(`/${_id}/edit`, { imgURL, meaning, pictoURL, _id })
+                .then((data)=> data.data )
     }
 
     deleteMySign =(id) =>{

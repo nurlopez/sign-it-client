@@ -18,8 +18,7 @@ class EditProject extends Component {
     const { imgURL, meaning } = this.state;
       
     mySignService.updateMySign({imgURL, meaning,})
-     .then( (updatedSign) => {
-      this.props.getOneMySign();
+     .then( () => {
       this.props.history.push('/mysigns');    
       // after submitting the form, redirect to '/mysigns'
     })
