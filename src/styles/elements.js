@@ -22,6 +22,11 @@ a  {
   }
 ${props => props.primary && css`
 border: none;
+background: #F38630;
+color: white;
+`}
+${props => props.secondary && css`
+border: none;
 background: #EF835F;
 color: white;
 `}`;
@@ -42,6 +47,9 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 text-align:center;
+a {
+  text-decoration: none;
+}
 `
 
 export const ContainerSigns = styled.div
@@ -53,7 +61,7 @@ justify-content: center;
 align-items: flex-start;
 text-align:center;
 width-max: 100vw;
-background-color: #E0E4CC;
+background-color: #F9F8F4;
 `
 
 
@@ -70,7 +78,7 @@ padding: 10px;
 background: white;
 border: solid 1px white;
 border-radius: 5px;
-margin: 2px;
+margin: 10px 10px;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 transition: 0.3s;
 img  {
@@ -85,4 +93,5 @@ flex-direction: column;
 justify-content: center;
 align-content: center;
 text-align:center;
+
 `

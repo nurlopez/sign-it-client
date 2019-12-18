@@ -34,7 +34,7 @@ class Login extends Component {
         <Form>
         <form onSubmit={this.handleFormSubmit}>
           <div>
-          <label>Username:</label>
+          <label>Username: </label>
           <input
             type="text"
             name="username"
@@ -43,7 +43,7 @@ class Login extends Component {
           />
           </div>
           <div>
-          <label>Password:</label>
+          <label>Password: </label>
           <input
             type="password"
             name="password"
@@ -57,9 +57,13 @@ class Login extends Component {
         </form>
         </Form>
 
-        <p>Don't have an account?</p>
+        
         <SubmitBtn>
-        <Link to={'/signup'}> Signup</Link>
+        <p>· · ·</p>
+        <p>Don't have an account?</p>
+        <Link to={'/signup'}>
+         Signup
+         </Link>
         </SubmitBtn>
         </Container>
         </div>

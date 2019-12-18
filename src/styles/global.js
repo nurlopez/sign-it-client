@@ -1,5 +1,6 @@
 
 import styled, { css }  from 'styled-components'
+import { red } from 'color-name';
 
 
 
@@ -70,19 +71,52 @@ align-items: center;
 text-align:center;
 label {
   font-family: "Solway", serif; 
+  > value {
+  font-size: 25px;
+  font-family: "Solway", serif; 
+}
 }
 input {
-  background: #E0E4CC;
+  background: transparent;
   border: none;
   border-bottom: solid 1px ;
   margin-top: 20px;
-
   font-family: "Solway", serif; 
 }
+p {
+  font-size: 12px;
+  font-family: "Solway", serif; 
+}
+
 `
 export const SubmitBtn = styled.button
 `
+border: none;
+background: transparent;
 
+input {
+  border: none;
+  border-radius: 5px;
+  background: #69D2E7;
+  color: white;
+  font-size: 16px;
+  padding: 10px
+}
+value {
+  font-size: 20px;
+  font-style: bold;
+  font-family: "Solway", serif; 
+}
+p {
+  font-size: 12px;
+  margin-top: 20px;
+}
+a {
+  font-size: 16px;
+  font-family: "Solway", serif; 
+  text-decoration: none;
+  color: #F38630;
+}
 `
 
 

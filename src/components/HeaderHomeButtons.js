@@ -20,7 +20,6 @@ export class HeaderHomeButtons extends Component {
               {/* <h1>SIGN IT</h1> */}
               
             <Link to="/resources">
-              
               <Button>
               <img src={ resourcesLib } alt= "user" width= "50" />
               Resources
@@ -29,7 +28,7 @@ export class HeaderHomeButtons extends Component {
             <br />
             <Link to="/mysigns">
               
-              <Button primary>
+              <Button secondary>
               <img src={ privateSigns } alt= "user" width= "50" />
               My Signs
               </Button>

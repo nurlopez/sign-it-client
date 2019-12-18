@@ -3,6 +3,11 @@ import { ContainerSigns } from "../../styles/elements";
 import mySignService from "../../lib/mysign-service";
 import AllSigns from "../MySigns/AllSigns";
 
+/*---- button icons + styled components ---- */
+import   view  from '../../images/view.svg'
+import { Button } from '../../styles/elements'
+
+
 export default class MySignsList extends Component {
     constructor(props) {
         super(props);
@@ -30,7 +35,10 @@ export default class MySignsList extends Component {
     return (
         
       <>
-      <button onClick={this.handleGetSignCards}>View all SignCards</button>
+      <Button onClick={this.handleGetSignCards}>
+      <img src={ view } alt= "user" width= "45" />
+      View Sign Cards
+      </Button>
       
       <ContainerSigns>
       

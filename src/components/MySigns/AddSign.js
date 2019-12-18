@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import addSign from "../../images/add-sign.png";
 import mySignService from "../../lib/mysign-service";
 
-
+import { Button } from '../../styles/elements'
+import addSign from "../../images/add_photo.svg";
 
 export default class AddSign extends Component {
   constructor(props) {
@@ -62,8 +62,10 @@ export default class AddSign extends Component {
       <div>
         {this.state.isButtonShowing ? (
           <div>
-            <img src={addSign} alt="sign" width="100px" />
-            <button onClick={this.toggleForm}> Add my sign </button>
+            <Button secondary onClick={this.toggleForm}> 
+            <img src={ addSign } alt= "user" width= "100" />
+            Add sign
+            </Button>
           </div>
         ) : null}
 
@@ -84,12 +86,6 @@ export default class AddSign extends Component {
                 onChange={e => this.handleChange(e)}
               />
 
-              {/* <input
-                name="pictoURL"
-                placeholder="PictoURL"
-                value={this.state.pictoURL}
-                onChange={e => this.handleChange(e)}
-              /> */}
               <br></br>
               <button onClick={this.handleFormSubmit}>Submit</button>
             </form>

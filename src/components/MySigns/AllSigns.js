@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import MySignCard from './MySignCard/MySignCard'
 
-// import edit from "../../images/edit.png";
-// import remove from "../../images/delete.png";
-
 import { ContainerSigns } from "../../styles/elements";
 
 export default class AllSigns extends Component {
@@ -32,23 +29,3 @@ export default class AllSigns extends Component {
     );
   }
 }
-
-{/* 
-<Signcard key={sign._id}>
-               
-               <img
-                 src={sign.imgURL}
-                 alt={`sign for ${sign.meaning}`}
-                 width="100px"
-               />
-               <p>{sign.meaning}</p>
-
-              <ContainerButtons>
-               <ButtonIcon onClick={() =>console.log('edit-sign')}>
-               <img src={edit} alt= "edit2" width= "30"/></ButtonIcon>
-
-               <ButtonIcon onClick={() =>console.log('remove')}>
-               <img src={remove} alt= "delete" width= "30"/></ButtonIcon>
-               </ContainerButtons>
-
-             </Signcard>  */}

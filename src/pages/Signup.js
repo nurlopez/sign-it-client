@@ -55,9 +55,11 @@ class Signup extends Component {
           </SubmitBtn> 
         </form>
         </Form>
-
+        <SubmitBtn>
+        <p>· · ·</p>
         <p>Already have account?</p>
         <Link to={'/login'}> Login</Link>
+        </SubmitBtn>
         </Container>
       </div>
     );

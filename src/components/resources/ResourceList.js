@@ -7,7 +7,7 @@ export default class ResourceList extends Component {
     return (
       <ContainerSigns>
         {this.props.resources.length === 0 ? (
-          <p> choose a category </p>
+          <p>  </p>
         ) : (
           this.props.resources.map(resource => {
             console.log("here?", resource);
@@ -16,7 +16,7 @@ export default class ResourceList extends Component {
                 <img
                   src={resource.imgURL}
                   alt={`sign for ${resource.meaning}`}
-                  width="100px"
+                  width="250px"
                 />
                 <p>{resource.meaning}</p>{" "}
               </Signcard>
