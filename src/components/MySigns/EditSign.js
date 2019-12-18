@@ -1,7 +1,8 @@
-// components/projects/EditProject.js
-
 import React, { Component } from 'react';
 import mySignService from "../../lib/mysign-service";
+import { Form, Button } from '../../styles/elements'
+import { Container } from '../../styles/global'
+
 
 class EditProject extends Component {
   constructor(props){
@@ -33,7 +34,9 @@ class EditProject extends Component {
   render(){
     return (
         <div>
-        <form>
+        <Container>
+        <Form>
+        
           <input
             type="file"
             placeholder="ImageURL"
@@ -48,9 +51,12 @@ class EditProject extends Component {
             onChange={e => this.handleChange(e)}
           />
 
-          <br></br>
-          <button onClick={this.handleEditSubmit}>Update</button>
-        </form>
+          <Button onClick={this.handleEditSubmit}>
+          Update
+          </Button>
+        
+        </Form>
+        </Container>
       </div>
     )
   }

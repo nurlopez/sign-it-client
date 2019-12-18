@@ -51,6 +51,26 @@ a {
   text-decoration: none;
 }
 `
+export const ContainerMySignsButtons = styled.div
+`
+background: transparent;
+margin-top:-20px;
+padding: 5px 0px;
+display: flex;
+width: 250px;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+text-align:center;
+a {
+  text-decoration: none;
+}
+`
+export const UpdateButton = styled.div
+`
+
+  }
+`
 
 export const ContainerSigns = styled.div
 `
@@ -63,8 +83,6 @@ text-align:center;
 width-max: 100vw;
 background-color: #F9F8F4;
 `
-
-
 
 export const Signcard = styled.div
 `
@@ -84,7 +102,20 @@ transition: 0.3s;
 img  {
   border-radius: 5px;
 }
+p {
+  font-size: 16px;
+  font-family: "Solway", serif;  
+}
 `
+
+export const EditForm= styled.div
+`
+input{
+  border: solid 1px red ;
+}
+
+`
+
 
 export const Form = styled.div
 `

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import edit from '../../../images/edit.png';
-import remove from '../../../images/delete.png';
-import { ContainerButtons, ButtonIcon } from '../../../styles/elements';
+
+import edit from '../../../images/build.svg';
+import remove from '../../../images/trash.svg';
+
+import { ContainerMySignsButtons, ButtonIcon } from '../../../styles/elements';
 import mySignService from '../../../lib/mysign-service'
 
 
@@ -31,18 +33,18 @@ export default class MySignContent extends Component {
             <img
             src={sign.imgURL}
             alt={`sign for ${sign.meaning}`}
-            width="100px"
+            width="250px"
             />
             <p>{sign.meaning}</p>
 
-            <ContainerButtons>
+            <ContainerMySignsButtons>
             <ButtonIcon onClick={this.props.toggleEditForm}>
-            <img src={edit} alt= "edit2" width= "30"/></ButtonIcon>
+            <img src={edit} alt= "edit2" width= "40"/></ButtonIcon>
 
             <ButtonIcon onClick={this.handleRemoveMySign}>
             <img src={remove} alt= "delete" width= "30"/>
             </ButtonIcon>
-            </ContainerButtons>
+            </ContainerMySignsButtons>
 
            </>
         )
