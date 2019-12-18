@@ -10,9 +10,11 @@ export default class Home extends Component {
         return (
         
         <HomeContainer>
+        <article>
         <a href="/"><img src={logo} alt="logo" width="200px" align="middle"/></a> 
         <h1>SIGN IT</h1>
-        <SectionButtons />         
+        <SectionButtons />  
+        </article>       
         </HomeContainer> 
             
         )

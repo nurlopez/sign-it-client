@@ -29,13 +29,13 @@ export default class MySignsList extends Component {
         console.log(this.state)
     return (
         
-      <ContainerSigns>
+      <>
       <button onClick={this.handleGetSignCards}>View all SignCards</button>
-      
+      <ContainerSigns>
       <AllSigns mySigns={this.state.listOfMySigns} handleGetSignCards={this.handleGetSignCards} />
 
      </ContainerSigns>
-      
+      </>
     );
   }
 }

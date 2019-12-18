@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 
 export const Button = styled.button
 `background: transparent;
+font-size: 16px;
 border: solid 1px #F38630 ;
 border-radius: 3px;
 color: #F38630;

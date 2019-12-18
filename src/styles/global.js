@@ -43,6 +43,15 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align:center;
+
+article {
+background: white;
+border: solid 1px white;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+padding: 50px 25px;
+}
 `
 export const Container = styled.div`
 height: 100vh;

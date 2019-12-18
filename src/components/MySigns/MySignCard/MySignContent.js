@@ -4,6 +4,10 @@ import remove from '../../../images/delete.png';
 import {ContainerButtons, ButtonIcon } from '../../../styles/elements';
 
 export default class MySignContent extends Component {
+
+    // remove function
+
+
     render() {
         const { sign } = this.props
         return (
