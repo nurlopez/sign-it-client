@@ -19,16 +19,15 @@ class MySigns {
             
       } 
 
-    //   handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     const { imageURL, meaning, pictoURL } = this.state;
-    //     const { author } = this.props;
-    
     createSign(newMySign) {
         return this.mySign.post('/create-sign', newMySign )
             .then(({ data }) => data)
             
     } 
+
+    allMySigns() {
+      return this.mySign.get('/').then(response => response.data);
+    }
 }
      
     

@@ -20,13 +20,15 @@ export default class AddSign extends Component {
     event.preventDefault();
     const { imageURL, meaning, pictoURL } = this.state;
     const { author } = this.props;
+    
     mySignService.createSign({imageURL, meaning, pictoURL, author})
     .then((sign) => {
       console.log('es una signcard?', sign);
     })
     .catch((error) => console.log(error))
-  }
 
+    
+  }
 
   toggleForm = () =>
     this.setState({
