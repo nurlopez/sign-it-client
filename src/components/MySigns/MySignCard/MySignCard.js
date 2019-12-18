@@ -37,7 +37,7 @@ toggleEditForm = () =>
             <Signcard>
             {this.state.isMySignContentShowing && this.state.sign ? (
           
-                <MySignContent sign={this.state.sign} toggleEditForm={this.toggleEditForm} />
+                <MySignContent sign={this.state.sign} toggleEditForm={this.toggleEditForm} handleGetSignCards={this.props.handleGetSignCards} />
                 
                 ) : null}
                 

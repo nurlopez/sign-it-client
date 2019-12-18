@@ -45,7 +45,7 @@ class MySigns {
     }
 
     deleteMySign =(id) =>{
-      return this.mySign.del(`/${id}`)
+      return this.mySign.delete(`/${id}/remove`)
       .then((data)=> data.data )
     }
     
