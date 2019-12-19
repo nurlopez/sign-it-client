@@ -14,7 +14,7 @@ export default class AllSigns extends Component {
           <p>  </p>
         ) : (
           this.props.mySigns.map(sign => {
-            console.log("allsigns?", sign);
+            
             return (
                 
               <MySignCard sign={sign} handleGetSignCards={this.props.handleGetSignCards}/>

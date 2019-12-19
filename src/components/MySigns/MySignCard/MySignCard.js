@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EditMySignCard from './EditMySignCard';
 import MySignContent from './MySignContent';
-import { Signcard } from '../../../styles/elements';
+import { Signcard, SignCardBackground } from '../../../styles/elements';
 
 
 
@@ -34,6 +34,7 @@ toggleEditForm = () =>
 
     render() {
         return (
+        <SignCardBackground>
             <Signcard>
             {this.state.isMySignContentShowing && this.state.sign ? (
           
@@ -48,6 +49,7 @@ toggleEditForm = () =>
                 ) : null}
             
             </Signcard>
+            </SignCardBackground>
         )
     }
 }

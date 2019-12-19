@@ -43,13 +43,13 @@ export default class AddSign extends Component {
 
     fileChange = (event) => {
       const file = event.target.files[0];
-      console.log('es un archivo?', file);
+      
       
       const uploadData = new FormData()
       uploadData.append('photo', file)
       mySignService.imageUpload(uploadData)
       .then((image) => {
-        console.log('es una imagen?', image);
+        
           this.setState({ imageURL: image })
       })
       .catch((error) => console.log(error))

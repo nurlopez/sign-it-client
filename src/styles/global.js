@@ -1,6 +1,6 @@
 
 import styled, { css }  from 'styled-components'
-import { red } from 'color-name';
+
 
 
 
@@ -63,12 +63,14 @@ padding: 50px 25px;
 `
 export const Container = styled.div`
 @import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
-height: 100vh;
+
+height-min: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: center;
 text-align:center;
+background-color: #F9F8F4;
 label {
   font-family: "Solway", serif; 
   > value {
@@ -87,8 +89,8 @@ p {
   font-size: 12px;
   font-family: "Solway", serif; 
 }
-
 `
+
 export const SubmitBtn = styled.button
 `
 border: none;
@@ -122,8 +124,7 @@ a {
 
 export const Main = styled.div`
 background:#F9F8F4
-${'' /* linear-gradient( 45deg, #feada6, #f5efef ); */}
-min-height: 100vh;
+min-height: 1090px;
 display: flex;
 flex-direction: column;
 justify-content: center;

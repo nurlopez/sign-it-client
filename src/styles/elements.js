@@ -53,7 +53,7 @@ a {
 `
 export const ContainerMySignsButtons = styled.div
 `
-background: transparent;
+background-color: transparent;
 margin-top:-20px;
 padding: 5px 0px;
 display: flex;
@@ -82,6 +82,11 @@ align-items: flex-start;
 text-align:center;
 width-max: 100vw;
 background-color: #F9F8F4;
+`
+export const SignCardBackground = styled.div
+`
+background-color: #F9F8F4;
+height-min: 100vh;
 `
 
 export const Signcard = styled.div
