@@ -8,13 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo-sign-it.gif",
-      "type": "image/gif",
+      "src": "logo-sign-it.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo-sign-it.gif",
-      "type": "image/gif",
+      "src": "logo-sign-it.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
