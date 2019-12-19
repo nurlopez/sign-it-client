@@ -64,7 +64,7 @@ padding: 50px 25px;
 export const Container = styled.div`
 @import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
 
-height-min: 100vh;
+height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -124,7 +124,7 @@ a {
 
 export const Main = styled.div`
 background:#F9F8F4
-min-height: 1090px;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;

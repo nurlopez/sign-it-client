@@ -11,6 +11,7 @@ import HeaderHomeButtons from "./HeaderHomeButtons";
 import   userEnter  from '../images/account_circle.svg'
 import   exit  from '../images/remove_circle.svg'
 import   newUser  from '../images/person_add.svg'
+import   homeIcon  from '../images/home.svg'
 import   userLogged  from '../images/user1.svg'
 
 
@@ -21,10 +22,15 @@ class Navbar extends Component {
     return (
       <div>
         <Nav>
-        
-          
+       
           {isLoggedin ? (
+            
             <div className="signup-btns">
+            
+            <NavButton primary onClick={'/'}> 
+            <a href="/"><img src={ homeIcon } alt= "user" width= "45"/> </a> 
+            </NavButton>
+
               <p> <img src={ userLogged } alt= "user" width= "50" /> Hi  {user.username}! </p>
 
               <NavButton primary onClick={logout}> 
