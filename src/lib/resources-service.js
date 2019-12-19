@@ -12,7 +12,7 @@ class Resources {
        
         
     return this.resource.get(`/categories/${category}`).then(response => {
-        console.log('services-2', response.data);
+       
         return response.data
     })
   }

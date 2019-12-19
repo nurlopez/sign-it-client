@@ -18,7 +18,7 @@ export default class MySignContent extends Component {
         
         mySignService.deleteMySign(this.props.sign._id)
         .then(() => {
-        //   console.log('Is this deleted?', allSigns);
+        
           this.props.handleGetSignCards()
         })
         .catch((error) => console.log(error))

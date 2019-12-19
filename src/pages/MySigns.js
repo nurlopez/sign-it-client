@@ -15,9 +15,9 @@ class MySigns extends Component {
     
     mySignService.getAllSigns()
     .then( (allMySigns) => {
-      console.log(allMySigns)
+      
       this.setState({listOfMySigns : allMySigns})
-      console.log('all my signs?', allMySigns)
+      
     })
     .catch( (err) => console.log(err));
   }

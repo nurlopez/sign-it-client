@@ -22,7 +22,7 @@ export default class MySignsList extends Component {
         
         mySignService.allMySigns()
         .then((allSigns) => {
-          console.log('es una signcard?', allSigns);
+          
           this.setState({listOfMySigns : allSigns})
         })
         .catch((error) => console.log(error))

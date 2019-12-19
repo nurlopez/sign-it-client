@@ -25,8 +25,8 @@ export default class AddSign extends Component {
     const { author } = this.props;
     
     mySignService.createSign({imageURL, meaning, pictoURL, author})
-    .then((sign) => {
-      console.log('es una signcard?', sign);
+    .then(() => {
+      
       this.toggleForm()
          
        })

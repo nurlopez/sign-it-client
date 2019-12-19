@@ -20,8 +20,7 @@ componentDidUpdate(prevProps) {
     if (prevProps.sign.meaning !== this.props.sign.meaning) {
         this.setState({sign: this.props.sign})
     }
-    console.log('prevProps hi' ,prevProps);
-    console.log('Props hi' , this.props);
+
 
 }
 

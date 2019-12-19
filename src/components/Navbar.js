@@ -27,7 +27,7 @@ class Navbar extends Component {
             
             <div className="signup-btns">
             
-            <NavButton primary onClick={'/'}> 
+            <NavButton primary> 
             <a href="/"><img src={ homeIcon } alt= "user" width= "45"/> </a> 
             </NavButton>
 

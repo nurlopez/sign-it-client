@@ -10,7 +10,7 @@ export default class ResourceList extends Component {
           <p>  </p>
         ) : (
           this.props.resources.map(resource => {
-            console.log("here?", resource);
+           
             return (
               <Signcard key={resource._id}>
                 <img

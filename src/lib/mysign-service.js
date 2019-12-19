@@ -9,10 +9,10 @@ class MySigns {
       }
 
       imageUpload(file) {
-        console.log(file);
+       
         return this.mySign.post("/create-sign/image", file)
             .then(({ data }) => {
-                console.log('service-image', data);
+                
                 return data
             })
             

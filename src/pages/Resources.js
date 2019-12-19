@@ -17,9 +17,9 @@ export class Resources extends Component {
     
      resourcesServices.getAllResources(category)
     .then( (allResources) => {
-      console.log(allResources)
+      
       this.setState({listOfResources : allResources})
-      console.log('uola', allResources)
+      
     })
     .catch( (err) => console.log(err));
   }
